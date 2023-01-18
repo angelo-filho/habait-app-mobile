@@ -1,4 +1,6 @@
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import "./src/lib/dayjs";
+
+import { StatusBar } from "react-native";
 import {
   useFonts,
   Inter_400Regular,
@@ -32,16 +34,3 @@ export default function App() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#09090a",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    color: "#fff",
-    fontFamily: "Inter_600SemiBold",
-  },
-});
