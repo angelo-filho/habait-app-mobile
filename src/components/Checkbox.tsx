@@ -10,9 +10,15 @@ import colors from "tailwindcss/colors";
 interface CheckboxProps extends TouchableOpacityProps {
   title: string;
   checked?: boolean;
+  semiBold?: boolean;
 }
 
-export function Checkbox({ title, checked = false, ...rest }: CheckboxProps) {
+export function Checkbox({
+  title,
+  checked = false,
+  semiBold = false,
+  ...rest
+}: CheckboxProps) {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
@@ -27,7 +33,11 @@ export function Checkbox({ title, checked = false, ...rest }: CheckboxProps) {
         <View className="h-8 w-8 bg-zinc-900 rounded-lg" />
       )}
 
-      <Text className="text-white text-base ml-3">{title}</Text>
+      <Text
+        className={`text-white text-base ml-3 ${semiBold && "font-semibold"}`}
+      >
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 }
